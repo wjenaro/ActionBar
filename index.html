@@ -7,17 +7,44 @@
     <style>
         body{
             background-color: red;
+           }
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+           justify-content: center ;
+            align-items: center;
+            height: 100vh;
+            
+           
         }
+        .flex-container > div {
+                     margin: 1px;
+                    text-align: center;
+                    
+                   
+}
     </style>
 </head>
 <body>
-    <div class="row">
-        <div>
+    <div class="flex-container">
+        <div class="left" style=" width: 30%;">
+            <img src="img/love.jpg" alt="love" style=" display: inline; float: left;
+                width: 20%; height: 20%; padding: 0px;">
+            <p> Let see how good we Match </p>
+            <P id="loveResults"> You match %</P>
 
         </div>
-        <div>
-            
-        </div>
+        <div class="right">
+        <h2> Love Calculator</h2>
+            <div> <label>Name of Lady </label><input type="text"></div>
+        
+                     <div><label>Name of Mane</label>
+                                <input type="text"></div>
+                                <div>
+                                    <input type="button" value="Submit" >
+                                 </div>
+             </div>
+             
     </div>
     
 </body>
