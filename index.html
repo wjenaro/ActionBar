@@ -28,24 +28,37 @@
 <body>
     <div class="flex-container">
         <div class="left" style=" width: 30%;">
-            <img src="img/love.jpg" alt="love" style=" display: inline; float: left;
-                width: 20%; height: 20%; padding: 0px;">
-            <p> Let see how good we Match </p>
-            <P id="loveResults"> You match %</P>
+          <div><img src="img/love.jpg" alt="love" style=" display: inline; float: left;
+            width: 20%; height: 20%; padding: 0px;"></div>  
+            
+            <div id="loveResults" style="background-color: rgb(238, 22, 22);"></div>
+            
 
         </div>
         <div class="right">
         <h2> Love Calculator</h2>
-            <div> <label>Name of Lady </label><input type="text"></div>
+                        <div> <label>Lady </label><input type="text" id="lady"></div>
         
-                     <div><label>Name of Mane</label>
-                                <input type="text"></div>
+                     <div><label>Man</label>
+                                <input type="text" id="man"></div>
                                 <div>
-                                    <input type="button" value="Submit" >
+                                    <input type="button" value="Submit" onclick="calculateLove(this)">
                                  </div>
              </div>
              
     </div>
-    
+    <script>
+        function calculateLove(){
+            var n= Math.random();
+            var output=Math.floor(n*100);
+
+            var girl= document.getElementById("lady").value;
+            var boy=document.getElementById("man").value;
+            var re=girl+" & "+boy+ "<br>"+" you are "+output +" % "+"<br>"+ "Matchable";
+            document.getElementById("loveResults").innerHTML = re;          
+
+
+        }
+    </script>
 </body>
 </html>
