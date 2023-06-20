@@ -50,12 +50,32 @@
     <script>
         function calculateLove(){
             var n= Math.random();
-            var output=Math.floor(n*100);
-
+            var output=Math.floor(n*100)+1;
             var girl= document.getElementById("lady").value;
             var boy=document.getElementById("man").value;
+            
             var re=girl+" & "+boy+ "<br>"+" you are "+output +" % "+"<br>"+ "Matchable";
-            document.getElementById("loveResults").innerHTML = re;          
+
+            // check and give customerble message
+
+            //if less than 50% -- Not matchable, Good luck 
+            //if above 50  and  less than 80 - -- You can match, try to meet and know each other more
+            //if above 80--- You can fuck each other tonight ..hehe
+
+              //start if statment here
+              if (output<50){
+                document.getElementById("loveResults").innerHTML = re;  
+               alert("Sorry, can't work");
+                
+            }
+            if (output >= 50 && output < 80){
+                document.getElementById("loveResults").innerHTML = re + "You Match"; 
+            }
+            else{
+                document.getElementById("loveResults").innerHTML = re + "Meet  and Fuck "; 
+            }
+           
+                            
 
 
         }
