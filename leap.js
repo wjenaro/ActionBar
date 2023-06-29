@@ -3,11 +3,24 @@ function isLeap(year){
         ==except it is divisible by 100
         === unless % by 400
     */
-   if (year%4===0 && year%100===0){
-    alert("not leap year");
+   if (year%4===0){
+     if(year%100===0) {
+        console.log("Not leap");
+
+
+     }
+     else{
+        if(year%400===0){
+            console.log("Yes, Leap");
+        }
+        else{
+            console.log('Not Leap');
+        }
+     }
+    
    }
-   if( year%4===0 && year%400===0){
-    alert("is Leap Year");
+   else{
+    console.log("Not Leap year");
    }
 
 }
